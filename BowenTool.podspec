@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "BowenTool"
-s.version      = "1.0.2"
+s.version      = "0.0.1"
 s.platform     = :ios, "7.0"
 s.ios.deployment_target = '7.0'
 s.summary      = "bowen some tools"
@@ -18,8 +18,13 @@ ss.source_files = 'BowenTool/Category/**/*'
 end
 
 
-s.subspec 'AES128ECB' do |ss|
-ss.source_files = 'BowenTool/AES128ECB/*'
+s.subspec 'ThirdTool' do |ss|
+# ss.source_files = 'BowenTool/AES128ECB/*'
+
+  t.subspec 'AES128ECB' do |sss|
+  sss.source_files = 'BowenTool/ThirdTool/AES128ECB/**/*'      
+  end
+
 end
 
 

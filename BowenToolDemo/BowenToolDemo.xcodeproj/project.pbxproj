@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0E316359203EBF1E00970065 /* UANetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E316358203EBF1E00970065 /* UANetworking.m */; };
-		0E31637A203EC39A00970065 /* NSString+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E31636F203EC39A00970065 /* NSString+AES.m */; };
-		0E31637B203EC39A00970065 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E316370203EC39A00970065 /* NSString+Base64.m */; };
-		0E31637C203EC39A00970065 /* AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E316371203EC39A00970065 /* AESCrypt.m */; };
-		0E31637D203EC39A00970065 /* NSData+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E316374203EC39A00970065 /* NSData+AES.m */; };
-		0E31637E203EC39A00970065 /* NSString+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E316378203EC39A00970065 /* NSString+Extend.m */; };
-		0E31637F203EC39A00970065 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E316379203EC39A00970065 /* NSData+Base64.m */; };
+		0E31638E203ECA2600970065 /* NSString+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E316383203ECA2600970065 /* NSString+AES.m */; };
+		0E31638F203ECA2600970065 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E316384203ECA2600970065 /* NSString+Base64.m */; };
+		0E316390203ECA2600970065 /* AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E316385203ECA2600970065 /* AESCrypt.m */; };
+		0E316391203ECA2600970065 /* NSData+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E316388203ECA2600970065 /* NSData+AES.m */; };
+		0E316392203ECA2600970065 /* NSString+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E31638C203ECA2600970065 /* NSString+Extend.m */; };
+		0E316393203ECA2600970065 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E31638D203ECA2600970065 /* NSData+Base64.m */; };
 		0E5D9F8F203E573D00C41291 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5D9F8E203E573D00C41291 /* AppDelegate.m */; };
 		0E5D9F92203E573D00C41291 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5D9F91203E573D00C41291 /* ViewController.m */; };
 		0E5D9F95203E573D00C41291 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E5D9F93203E573D00C41291 /* Main.storyboard */; };
@@ -33,18 +33,21 @@
 		037930013A2FA5B8E7641854 /* Pods-BowenToolDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BowenToolDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-BowenToolDemo/Pods-BowenToolDemo.release.xcconfig"; sourceTree = "<group>"; };
 		0E316357203EBF1E00970065 /* UANetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UANetworking.h; sourceTree = "<group>"; };
 		0E316358203EBF1E00970065 /* UANetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UANetworking.m; sourceTree = "<group>"; };
-		0E31636E203EC39A00970065 /* NSData+AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AES.h"; sourceTree = "<group>"; };
-		0E31636F203EC39A00970065 /* NSString+AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AES.m"; sourceTree = "<group>"; };
-		0E316370203EC39A00970065 /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
-		0E316371203EC39A00970065 /* AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESCrypt.m; sourceTree = "<group>"; };
-		0E316372203EC39A00970065 /* NSString+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extend.h"; sourceTree = "<group>"; };
-		0E316373203EC39A00970065 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
-		0E316374203EC39A00970065 /* NSData+AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES.m"; sourceTree = "<group>"; };
-		0E316375203EC39A00970065 /* NSString+AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AES.h"; sourceTree = "<group>"; };
-		0E316376203EC39A00970065 /* AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESCrypt.h; sourceTree = "<group>"; };
-		0E316377203EC39A00970065 /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
-		0E316378203EC39A00970065 /* NSString+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extend.m"; sourceTree = "<group>"; };
-		0E316379203EC39A00970065 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		0E316382203ECA2600970065 /* NSData+AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AES.h"; sourceTree = "<group>"; };
+		0E316383203ECA2600970065 /* NSString+AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AES.m"; sourceTree = "<group>"; };
+		0E316384203ECA2600970065 /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		0E316385203ECA2600970065 /* AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESCrypt.m; sourceTree = "<group>"; };
+		0E316386203ECA2600970065 /* NSString+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extend.h"; sourceTree = "<group>"; };
+		0E316387203ECA2600970065 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		0E316388203ECA2600970065 /* NSData+AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES.m"; sourceTree = "<group>"; };
+		0E316389203ECA2600970065 /* NSString+AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AES.h"; sourceTree = "<group>"; };
+		0E31638A203ECA2600970065 /* AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESCrypt.h; sourceTree = "<group>"; };
+		0E31638B203ECA2600970065 /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
+		0E31638C203ECA2600970065 /* NSString+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extend.m"; sourceTree = "<group>"; };
+		0E31638D203ECA2600970065 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		0E316396203ECA7400970065 /* UAThirdTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UAThirdTool.h; path = ThirdTool/UAThirdTool.h; sourceTree = "<group>"; };
+		0E316397203ECA9D00970065 /* UAUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UAUIKit.h; path = Category/UAUIKit.h; sourceTree = "<group>"; };
+		0E316398203ECA9D00970065 /* UATools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UATools.h; sourceTree = "<group>"; };
 		0E5D9F8A203E573D00C41291 /* BowenToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BowenToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E5D9F8D203E573D00C41291 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0E5D9F8E203E573D00C41291 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,7 +57,6 @@
 		0E5D9F96203E573D00C41291 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E5D9F9B203E573D00C41291 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E5D9F9C203E573D00C41291 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0E5D9FA7203E57F800C41291 /* BBUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBUIKit.h; sourceTree = "<group>"; };
 		0E5D9FAA203E57F800C41291 /* NSDictionary+Json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Json.h"; sourceTree = "<group>"; };
 		0E5D9FAB203E57F800C41291 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
 		0E5D9FAC203E57F800C41291 /* NSObject+UA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+UA.h"; sourceTree = "<group>"; };
@@ -69,7 +71,6 @@
 		0E5D9FB6203E57F800C41291 /* NSMutableAttributedString+UA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+UA.h"; sourceTree = "<group>"; };
 		0E5D9FB7203E57F800C41291 /* NSDictionary+UA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+UA.h"; sourceTree = "<group>"; };
 		0E5D9FB8203E57F800C41291 /* NSArray+UA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+UA.h"; sourceTree = "<group>"; };
-		0E5D9FB9203E57F800C41291 /* BBTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBTools.h; sourceTree = "<group>"; };
 		3F99764F53B521503B0F9728 /* Pods-BowenToolDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BowenToolDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BowenToolDemo/Pods-BowenToolDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		63492289F6C1D009673C37A2 /* libPods-BowenToolDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BowenToolDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -95,21 +96,29 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		0E31636D203EC39A00970065 /* AES128ECB */ = {
+		0E316380203ECA2600970065 /* ThirdTool */ = {
 			isa = PBXGroup;
 			children = (
-				0E31636E203EC39A00970065 /* NSData+AES.h */,
-				0E31636F203EC39A00970065 /* NSString+AES.m */,
-				0E316370203EC39A00970065 /* NSString+Base64.m */,
-				0E316371203EC39A00970065 /* AESCrypt.m */,
-				0E316372203EC39A00970065 /* NSString+Extend.h */,
-				0E316373203EC39A00970065 /* NSData+Base64.h */,
-				0E316374203EC39A00970065 /* NSData+AES.m */,
-				0E316375203EC39A00970065 /* NSString+AES.h */,
-				0E316376203EC39A00970065 /* AESCrypt.h */,
-				0E316377203EC39A00970065 /* NSString+Base64.h */,
-				0E316378203EC39A00970065 /* NSString+Extend.m */,
-				0E316379203EC39A00970065 /* NSData+Base64.m */,
+				0E316381203ECA2600970065 /* AES128ECB */,
+			);
+			path = ThirdTool;
+			sourceTree = "<group>";
+		};
+		0E316381203ECA2600970065 /* AES128ECB */ = {
+			isa = PBXGroup;
+			children = (
+				0E316389203ECA2600970065 /* NSString+AES.h */,
+				0E316383203ECA2600970065 /* NSString+AES.m */,
+				0E31638A203ECA2600970065 /* AESCrypt.h */,
+				0E316385203ECA2600970065 /* AESCrypt.m */,
+				0E316382203ECA2600970065 /* NSData+AES.h */,
+				0E316388203ECA2600970065 /* NSData+AES.m */,
+				0E316386203ECA2600970065 /* NSString+Extend.h */,
+				0E31638C203ECA2600970065 /* NSString+Extend.m */,
+				0E316387203ECA2600970065 /* NSData+Base64.h */,
+				0E31638D203ECA2600970065 /* NSData+Base64.m */,
+				0E31638B203ECA2600970065 /* NSString+Base64.h */,
+				0E316384203ECA2600970065 /* NSString+Base64.m */,
 			);
 			path = AES128ECB;
 			sourceTree = "<group>";
@@ -151,8 +160,10 @@
 		0E5D9FA5203E57F800C41291 /* BowenTool */ = {
 			isa = PBXGroup;
 			children = (
-				0E5D9FB9203E57F800C41291 /* BBTools.h */,
-				0E31636D203EC39A00970065 /* AES128ECB */,
+				0E316398203ECA9D00970065 /* UATools.h */,
+				0E316397203ECA9D00970065 /* UAUIKit.h */,
+				0E316396203ECA7400970065 /* UAThirdTool.h */,
+				0E316380203ECA2600970065 /* ThirdTool */,
 				0E316356203EBEF300970065 /* Networking */,
 				0E5D9FA6203E57F800C41291 /* Category */,
 			);
@@ -163,7 +174,6 @@
 		0E5D9FA6203E57F800C41291 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				0E5D9FA7203E57F800C41291 /* BBUIKit.h */,
 				0E5D9FA8203E57F800C41291 /* UIKit */,
 			);
 			path = Category;
@@ -331,22 +341,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E31637B203EC39A00970065 /* NSString+Base64.m in Sources */,
+				0E31638F203ECA2600970065 /* NSString+Base64.m in Sources */,
 				0E316359203EBF1E00970065 /* UANetworking.m in Sources */,
-				0E31637A203EC39A00970065 /* NSString+AES.m in Sources */,
+				0E31638E203ECA2600970065 /* NSString+AES.m in Sources */,
 				0E5D9FBE203E57F800C41291 /* NSDictionary+UA.m in Sources */,
-				0E31637F203EC39A00970065 /* NSData+Base64.m in Sources */,
+				0E316393203ECA2600970065 /* NSData+Base64.m in Sources */,
 				0E5D9F92203E573D00C41291 /* ViewController.m in Sources */,
-				0E31637D203EC39A00970065 /* NSData+AES.m in Sources */,
+				0E316391203ECA2600970065 /* NSData+AES.m in Sources */,
 				0E5D9FC0203E57F800C41291 /* NSDictionary+Json.m in Sources */,
-				0E31637E203EC39A00970065 /* NSString+Extend.m in Sources */,
+				0E316392203ECA2600970065 /* NSString+Extend.m in Sources */,
 				0E5D9FBD203E57F800C41291 /* NSArray+UA.m in Sources */,
 				0E5D9FC2203E57F800C41291 /* NSString+UA.m in Sources */,
 				0E5D9F9D203E573D00C41291 /* main.m in Sources */,
 				0E5D9FBF203E57F800C41291 /* NSMutableAttributedString+UA.m in Sources */,
 				0E5D9F8F203E573D00C41291 /* AppDelegate.m in Sources */,
 				0E5D9FC1203E57F800C41291 /* NSDate+Extension.m in Sources */,
-				0E31637C203EC39A00970065 /* AESCrypt.m in Sources */,
+				0E316390203ECA2600970065 /* AESCrypt.m in Sources */,
 				0E5D9FC3203E57F800C41291 /* NSObject+UA.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
