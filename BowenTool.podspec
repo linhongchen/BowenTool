@@ -19,12 +19,9 @@ end
 
 
 s.subspec 'ThirdTool' do |ss|
-# ss.source_files = 'BowenTool/AES128ECB/*'
-
-  t.subspec 'AES128ECB' do |sss|
+  ss.subspec 'AES128ECB' do |sss|
   sss.source_files = 'BowenTool/ThirdTool/AES128ECB/**/*'      
   end
-
 end
 
 
