@@ -10,7 +10,7 @@ s.license      = { :type => "MIT", :file => "LICENSE" }
 s.author       = { "Bowen" => "591741691@qq.com" }
 s.source       = { :git => "https://github.com/linhongchen/BowenTool.git", :tag => s.version }
 s.requires_arc = true
-s.source_files = 'BowenTool/*.h', 'BowenTool/Category/*.h',
+s.source_files = 'BowenTool/*.h', 'BowenTool/Category/*.h'
 
 
 s.subspec 'Category' do |ss|
@@ -19,7 +19,7 @@ end
 
 
 s.subspec 'AES 128 ECB' do |ss|
-ss.source_files = 'BowenTool/AES 128 ECB/*'
+ss.source_files = 'BowenTool/AES128ECB/*'
 end
 
 
