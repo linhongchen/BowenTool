@@ -18,7 +18,7 @@ ss.source_files = 'BowenTool/Category/**/*'
 end
 
 
-s.subspec 'AES 128 ECB' do |ss|
+s.subspec 'AES128ECB' do |ss|
 ss.source_files = 'BowenTool/AES128ECB/*'
 end
 
