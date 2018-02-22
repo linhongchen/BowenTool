@@ -10,7 +10,7 @@ s.license      = { :type => "MIT", :file => "LICENSE" }
 s.author       = { "Bowen" => "591741691@qq.com" }
 s.source       = { :git => "https://github.com/linhongchen/BowenTool.git", :tag => s.version }
 s.requires_arc = true
-s.source_files = 'BowenTool/*.h', 'BowenTool/Category/*.h'
+s.source_files = 'BowenTool/*.h', 'BowenTool/Category/*.h','BowenTool/ThirdTool/*.h'
 
 
 s.subspec 'Category' do |ss|
