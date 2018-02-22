@@ -12,15 +12,11 @@ s.source       = { :git => "https://github.com/linhongchen/BowenTool.git", :tag 
 s.source_files = 'BowenTool/**/{*.h,*.m}'
 s.requires_arc = true
 
-s.source_files = 'BowenTool/*.h', 'BowenTool/Category/*.h'
+s.source_files = 'BowenTool/*.h', 'BowenTool/Category/*.h',BowenTool/Category/UIKit/*.{h,m},BowenTool/Tool/AES 128 ECB/*.{h,m}
 
-s.subspec 'Category' do |ss|
-ss.source_files = 'BowenTool/Category/**/*'
+s.subspec 'Networking' do |ss|
+ss.source_files = 'BowenTool/Networking/*.{h,m}'
 ss.dependency 'AFNetworking', '~> 3.0'
-end
-
-s.subspec 'Tool' do |ss|
-ss.source_files = 'BowenTool/Tool/AES 128 ECB/*'
 end
 
 end

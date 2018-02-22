@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0E316355203EB9B500970065 /* NSString+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E316354203EB9B500970065 /* NSString+AES.m */; };
+		0E316359203EBF1E00970065 /* UANetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E316358203EBF1E00970065 /* UANetworking.m */; };
 		0E5D9F8F203E573D00C41291 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5D9F8E203E573D00C41291 /* AppDelegate.m */; };
 		0E5D9F92203E573D00C41291 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5D9F91203E573D00C41291 /* ViewController.m */; };
 		0E5D9F95203E573D00C41291 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E5D9F93203E573D00C41291 /* Main.storyboard */; };
@@ -32,6 +33,8 @@
 		037930013A2FA5B8E7641854 /* Pods-BowenToolDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BowenToolDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-BowenToolDemo/Pods-BowenToolDemo.release.xcconfig"; sourceTree = "<group>"; };
 		0E316353203EB9B500970065 /* NSString+AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AES.h"; sourceTree = "<group>"; };
 		0E316354203EB9B500970065 /* NSString+AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AES.m"; sourceTree = "<group>"; };
+		0E316357203EBF1E00970065 /* UANetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UANetworking.h; sourceTree = "<group>"; };
+		0E316358203EBF1E00970065 /* UANetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UANetworking.m; sourceTree = "<group>"; };
 		0E5D9F8A203E573D00C41291 /* BowenToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BowenToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E5D9F8D203E573D00C41291 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0E5D9F8E203E573D00C41291 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -83,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E316356203EBEF300970065 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				0E316357203EBF1E00970065 /* UANetworking.h */,
+				0E316358203EBF1E00970065 /* UANetworking.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		0E5D9F81203E573D00C41291 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				0E5D9FB9203E57F800C41291 /* BBTools.h */,
+				0E316356203EBEF300970065 /* Networking */,
 				0E5D9FA6203E57F800C41291 /* Category */,
 				0E5D9FBB203E57F800C41291 /* Tool */,
 			);
@@ -329,6 +342,7 @@
 				0E5D9FD1203E591900C41291 /* NSData+AES.m in Sources */,
 				0E5D9FCF203E591900C41291 /* NSString+Base64.m in Sources */,
 				0E5D9FD0203E591900C41291 /* AESCrypt.m in Sources */,
+				0E316359203EBF1E00970065 /* UANetworking.m in Sources */,
 				0E5D9FBE203E57F800C41291 /* NSDictionary+UA.m in Sources */,
 				0E5D9F92203E573D00C41291 /* ViewController.m in Sources */,
 				0E316355203EB9B500970065 /* NSString+AES.m in Sources */,
