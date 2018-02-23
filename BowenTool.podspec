@@ -11,12 +11,11 @@ s.author       = { "Bowen" => "591741691@qq.com" }
 s.source       = { :git => "https://github.com/linhongchen/BowenTool.git", :tag => s.version }
 s.requires_arc = true
 s.source_files = 'BowenTool/*.h', 'BowenTool/Category/*.h','BowenTool/ThirdTool/*.h'
-
+s.resources    = 'BowenTool/Category/**/*.wav'
 
 s.subspec 'Category' do |ss|
 ss.source_files = 'BowenTool/Category/**/*'
 ss.dependency 'SVProgressHUD', '~> 2.2.1'
-ss.resources    = 'BowenTool/Category/*.wav'
 end
 
 
