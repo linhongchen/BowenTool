@@ -11,4 +11,9 @@
 
 @interface UANetworking : NSObject
 
+
+#pragma mark - <<<<<< Tool >>>>>> -
+//获取网络状态-BOOL-是否有网络
++ (BOOL)isNetworkStatus;
+
 @end

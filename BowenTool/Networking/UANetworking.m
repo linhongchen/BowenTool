@@ -22,4 +22,11 @@
 
 @implementation UANetworking
 
+
+#pragma mark - <<<<<< Tool >>>>>> -
++ (BOOL)isNetworkStatus
+{
+    return [[AFNetworkReachabilityManager sharedManager] isReachable];
+}
+
 @end

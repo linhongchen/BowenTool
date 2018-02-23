@@ -1,9 +1,9 @@
 //
 //  NSData+Base64.m
-//  Gurpartap Singh
+//  BowenToolDemo
 //
-//  Created by Gurpartap Singh on 06/05/12.
-//  Copyright (c) 2012 Gurpartap Singh. All rights reserved.
+//  Created by 陈伟财 on 2018/2/23.
+//  Copyright © 2018年 Bowen. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

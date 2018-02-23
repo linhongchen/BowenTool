@@ -9,6 +9,10 @@
 #ifndef UAUIKit_h
 #define UAUIKit_h
 
-#import "NSArray+UA.h"
+#import "UIActionSheet+Block.h"
+#import "UIAlertView+Block.h"
+#import "UIButton+UA.h"
+#import "UILabel+UA.h"
+#import "UITextField+UA.h"
 
 #endif /* UAUIKit_h */

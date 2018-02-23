@@ -9,5 +9,11 @@
 #ifndef UAThirdTool_h
 #define UAThirdTool_h
 
+#pragma mark - <<<<<< AES >>>>>> -
+#import "AESCrypt.h"
+#import "NSData+AES_ua.h"
+#import "NSString+AES_ua.h"
+#import "NSData+Base64.h"
+#import "NSString+Base64.h"
 
 #endif /* UAThirdTool_h */
