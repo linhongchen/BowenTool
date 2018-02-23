@@ -16,7 +16,7 @@ s.source_files = 'BowenTool/*.h', 'BowenTool/Category/*.h','BowenTool/ThirdTool/
 s.subspec 'Category' do |ss|
 ss.source_files = 'BowenTool/Category/**/*'
 ss.dependency 'SVProgressHUD', '~> 2.2.1'
-ss.resources    = "BowenTool/Category/**/*.war"
+ss.resources    = "BowenTool/Category/**/*.wav"
 end
 
 
