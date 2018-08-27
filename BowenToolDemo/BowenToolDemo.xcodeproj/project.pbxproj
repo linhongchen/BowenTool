@@ -31,6 +31,7 @@
 		0EAD7BCD203FB918001FA2E1 /* UIActionSheet+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD7BC3203FB917001FA2E1 /* UIActionSheet+Block.m */; };
 		0EAD7BCE203FB918001FA2E1 /* UILabel+UA.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD7BC5203FB917001FA2E1 /* UILabel+UA.m */; };
 		0EAD7BD0203FBF2C001FA2E1 /* scanner.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0EAD7BCF203FBF2C001FA2E1 /* scanner.wav */; };
+		0EDAAB13213408410039C83E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EDAAB12213408410039C83E /* Default-568h@2x.png */; };
 		70CE7E24DD29E3047497A3F9 /* libPods-BowenToolDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63492289F6C1D009673C37A2 /* libPods-BowenToolDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,7 @@
 		0EAD7BC8203FB918001FA2E1 /* UIButton+UA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+UA.h"; sourceTree = "<group>"; };
 		0EAD7BC9203FB918001FA2E1 /* UITextField+UA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+UA.h"; sourceTree = "<group>"; };
 		0EAD7BCF203FBF2C001FA2E1 /* scanner.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = scanner.wav; sourceTree = "<group>"; };
+		0EDAAB12213408410039C83E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3F99764F53B521503B0F9728 /* Pods-BowenToolDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BowenToolDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BowenToolDemo/Pods-BowenToolDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		63492289F6C1D009673C37A2 /* libPods-BowenToolDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BowenToolDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -105,6 +107,7 @@
 		0E5D9F81203E573D00C41291 = {
 			isa = PBXGroup;
 			children = (
+				0EDAAB12213408410039C83E /* Default-568h@2x.png */,
 				0E5D9F8C203E573D00C41291 /* BowenToolDemo */,
 				0E5D9F8B203E573D00C41291 /* Products */,
 				10387839A11E227966573B67 /* Pods */,
@@ -279,7 +282,7 @@
 		0E5D9F82203E573D00C41291 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Bowen;
 				TargetAttributes = {
 					0E5D9F89203E573D00C41291 = {
@@ -312,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E5D9F97203E573D00C41291 /* Assets.xcassets in Resources */,
+				0EDAAB13213408410039C83E /* Default-568h@2x.png in Resources */,
 				0EAD7BD0203FBF2C001FA2E1 /* scanner.wav in Resources */,
 				0E5D9F95203E573D00C41291 /* Main.storyboard in Resources */,
 			);
@@ -430,6 +434,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -437,6 +442,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -485,6 +491,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -492,6 +499,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
