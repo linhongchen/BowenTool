@@ -7,8 +7,6 @@
 //
 
 #import "NSData+Base64.h"
-#pragma GCC diagnostic ignored "-Wselector"
-#import <Availability.h>
 
 @implementation NSData (Base64)
 
@@ -22,20 +20,7 @@
 + (NSData *)ua_dataWithBase64EncodedString:(NSString *)string
 {
     if (![string length]) return nil;
-    NSData *decoded = nil;
-#if __MAC_OS_X_VERSION_MIN_REQUIRED < __MAC_10_9 || __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
-    if (![NSData instancesRespondToSelector:@selector(initWithBase64EncodedString:options:)])
-    {
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-        decoded = [[self alloc] initWithBase64Encoding:[string stringByReplacingOccurrencesOfString:@"[^A-Za-z0-9+/=]" withString:@"" options:NSRegularExpressionSearch range:NSMakeRange(0, [string length])]];
-#pragma clang diagnostic pop
-    }
-    else
-#endif
-    {
-        decoded = [[self alloc] initWithBase64EncodedString:string options:NSDataBase64DecodingIgnoreUnknownCharacters];
-    }
+    NSData *decoded = decoded = [[self alloc] initWithBase64EncodedString:string options:NSDataBase64DecodingIgnoreUnknownCharacters];
     return [decoded length]? decoded: nil;
 }
 /**
@@ -49,34 +34,22 @@
 {
     if (![self length]) return nil;
     NSString *encoded = nil;
-#if __MAC_OS_X_VERSION_MIN_REQUIRED < __MAC_10_9 || __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
-    if (![NSData instancesRespondToSelector:@selector(base64EncodedStringWithOptions:)])
+    switch (wrapWidth)
     {
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-        encoded = [self base64Encoding];
-#pragma clang diagnostic pop
-        
-    }
-    else
-#endif
-    {
-        switch (wrapWidth)
+        case 64:
         {
-            case 64:
-            {
-                return [self base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
-            }
-            case 76:
-            {
-                return [self base64EncodedStringWithOptions:NSDataBase64Encoding76CharacterLineLength];
-            }
-            default:
-            {
-                encoded = [self base64EncodedStringWithOptions:(NSDataBase64EncodingOptions)0];
-            }
+            return [self base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+        }
+        case 76:
+        {
+            return [self base64EncodedStringWithOptions:NSDataBase64Encoding76CharacterLineLength];
+        }
+        default:
+        {
+            encoded = [self base64EncodedStringWithOptions:(NSDataBase64EncodingOptions)0];
         }
     }
+
     if (!wrapWidth || wrapWidth >= [encoded length])
     {
         return encoded;
