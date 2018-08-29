@@ -1,17 +1,17 @@
 //
-//  NSDate+Extension_ua.m
+//  NSDate+Extension.m
 //  BowenToolDemo
 //
-//  Created by 陈伟财 on 2018/2/23.
+//  Created by 陈伟财 on 2018/8/29.
 //  Copyright © 2018年 Bowen. All rights reserved.
 //
 
-#import "NSDate+Extension_ua.h"
+#import "NSDate+Extension.h"
 
 // Thanks, AshFurrow
 static const unsigned componentFlags = (NSCalendarUnitYear| NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekOfYear |  NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitWeekday | NSCalendarUnitWeekdayOrdinal);
 
-@implementation NSDate (Extension_ua)
+@implementation NSDate (Extension)
 
 
 #pragma mark - <<<<<< avoid bottlenecks >>>>>> -
@@ -933,3 +933,4 @@ static const unsigned componentFlags = (NSCalendarUnitYear| NSCalendarUnitMonth 
 }
 
 @end
+

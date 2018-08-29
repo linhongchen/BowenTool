@@ -38,12 +38,11 @@ typedef void(^clickBlock)(UIButton *sender);
 - (void)addTarget:(id)target action:(SEL)action;
 
 #pragma mark - <<<<<< ButtonType >>>>>> -
-- (void)setbuttonType:(UAButtonType)type;
-- (void)layoutButtonWithStyle:(UAButtonStyle)style
-                        space:(CGFloat)space;
-
+- (void)ua_setbuttonType:(UAButtonType)type;
+- (void)ua_layoutButtonWithStyle:(UAButtonStyle)style
+                           space:(CGFloat)space;
 #pragma mark - <<<<<< 添加下划线 >>>>>> -
-- (void)addBottomLine;
+- (void)ua_addBottomLine;
 
 #pragma mark - <<<<<< 返回的宽度 >>>>>> -
 //获取button-font-text-返回的宽度（默认一行）

@@ -1,8 +1,8 @@
 //
-//  NSDate+Extension_ua.h
+//  NSDate+Extension.h
 //  BowenToolDemo
 //
-//  Created by 陈伟财 on 2018/2/23.
+//  Created by 陈伟财 on 2018/8/29.
 //  Copyright © 2018年 Bowen. All rights reserved.
 //
 
@@ -14,7 +14,7 @@
 #define D_WEEK        604800
 #define D_YEAR        31556926
 
-@interface NSDate (Extension_ua)
+@interface NSDate (Extension)
 
 #pragma mark - <<<<<< avoid bottlenecks >>>>>> -
 + (NSCalendar *) currentCalendar;
@@ -249,3 +249,4 @@
 + (NSString *)ua_ymdHmsFormat;
 
 @end
+

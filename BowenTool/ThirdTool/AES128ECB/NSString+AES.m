@@ -1,18 +1,18 @@
 //
-//  NSString+AES_ua.m
+//  NSString+AES.m
 //  BowenToolDemo
 //
-//  Created by 陈伟财 on 2018/2/23.
+//  Created by 陈伟财 on 2018/8/29.
 //  Copyright © 2018年 Bowen. All rights reserved.
 //
 
-#import "NSString+AES_ua.h"
+#import "NSString+AES.h"
 #import <CommonCrypto/CommonDigest.h>
 #import <CommonCrypto/CommonCryptor.h>
 #import "AESCrypt.h"
 
 //加密与解密的秘钥，需要与后台协商共同定义，保持与后台的秘钥相同
-@implementation NSString (AES_ua)
+@implementation NSString (AES)
 
 - (NSString *)md5
 {

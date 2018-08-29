@@ -20,7 +20,6 @@ typedef enum : NSUInteger {
 
 - (NSURL *)url;
 - (NSURL *)picUrl;
-- (NSURL *)picUrlBgc:(NSString *)bgc;
 
 - (NSNumber *)numberValue;
 
@@ -37,14 +36,13 @@ typedef enum : NSUInteger {
 //去除首尾空格
 - (NSString *)replaceEmptyString;
 
-//type 输入源 eg： @"0123456789."
-- (NSString *)componentsSeparatedInString:(NSString *)type;
 
-//输入源验证
-- (BOOL)typeString:(NSString *)typeStr;
-
-//正则验证
-- (BOOL)regularString:(NSString *)regularStr;
+/**
+ *  将中文字符串转为拼音
+ *
+ *  @return 拼音
+ */
+- (NSString *)ua_pinyinWithChinese;
 
 - (CGSize)stringSizeWithFont:(UIFont *)font;
 

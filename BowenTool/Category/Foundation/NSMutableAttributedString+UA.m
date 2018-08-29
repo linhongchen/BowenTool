@@ -7,9 +7,9 @@
 //
 
 #import "NSMutableAttributedString+UA.h"
-#import <UIKit/UIKit.h>
 
 @implementation NSMutableAttributedString (UA)
+
 
 
 + (instancetype)allocWithString:(NSString *)string
@@ -70,9 +70,16 @@
     [self appendAttributedString:attributeStr];
 }
 
+- (void)addLineToString:(NSString *)lineStr
+{
+    if (lineStr.hash == @"".hash) return;
+    
+    NSRange range = [self.string rangeOfString:lineStr];
+    [self addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:range];
+}
 
 - (void)addLineSpace:(CGFloat)space
-{    
+{
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
     [paragraphStyle setLineSpacing:space];
     
@@ -92,7 +99,7 @@
     
     
     [self addAttribute:NSKernAttributeName value:@(wordSpace) range:NSMakeRange(0, [string length])];
-
+    
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
     [paragraphStyle setLineSpacing:lineSpace];
     [self addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [string length])];

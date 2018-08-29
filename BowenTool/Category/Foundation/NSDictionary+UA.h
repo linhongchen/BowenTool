@@ -10,12 +10,25 @@
 
 @interface NSDictionary (UA)
 
-- (NSString *)UASortString;
+- (NSString *)uaSortString;
 
 //- (NSString *)sign;
 
 - (NSString *)uaJsonString;
 
-- (NSArray *)UASortKeys;
+- (NSArray *)uaSortKeys;
 
+
+/**
+ *  @brief  并入一个NSDictionary
+ *
+ *  @param dict NSDictionary
+ *
+ *  @return 增加后的NSDictionary
+ */
+- (NSDictionary *)ua_dictionaryByMergingWith:(NSDictionary *)dict;
+
+#pragma mark - Manipulation
+- (NSDictionary *)ua_dictionaryByAddingEntriesFromDictionary:(NSDictionary *)dictionary;
+- (NSDictionary *)ua_dictionaryByRemovingEntriesWithKeys:(NSSet *)keys;
 @end

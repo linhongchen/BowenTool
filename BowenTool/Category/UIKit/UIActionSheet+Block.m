@@ -13,7 +13,7 @@ static char kUIActionSheetBlockAddress;
 
 @implementation UIActionSheet (Block)
 
-- (void)showInView: (UIView *)view completionHandler:(ActionSheetBlock)block
+- (void)ua_showInView:(UIView *)view completionHandler:(ActionSheetBlock)block
 {
     self.delegate = self;
     objc_setAssociatedObject(self,&kUIActionSheetBlockAddress,block,OBJC_ASSOCIATION_COPY);
@@ -72,7 +72,7 @@ static char kUIActionSheetBlockAddress;
 }
 
 
-- (void)clearActionBlock
+- (void)ua_clearActionBlock
 {
     self.delegate = nil;
     objc_setAssociatedObject(self,&kUIActionSheetBlockAddress,nil,OBJC_ASSOCIATION_COPY);

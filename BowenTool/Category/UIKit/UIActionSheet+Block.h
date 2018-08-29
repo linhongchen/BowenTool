@@ -11,7 +11,7 @@
 typedef void (^ActionSheetBlock)(NSInteger);
 @interface UIActionSheet (Block)<UIActionSheetDelegate>
 
-- (void)showInView: (UIView *)view completionHandler: (ActionSheetBlock)block;
-- (void)clearActionBlock;
+- (void)ua_showInView:(UIView *)view completionHandler:(ActionSheetBlock)block;
+- (void)ua_clearActionBlock;
 
 @end

@@ -11,7 +11,7 @@
 typedef void (^AlertBlock)(NSInteger);
 @interface UIAlertView (Block)
 
-- (void)showAlertWithCompletionHandler: (AlertBlock)block;
-- (void)clearActionBlock;
+- (void)ua_showAlertWithCompletionHandler: (AlertBlock)block;
+- (void)ua_clearActionBlock;
 
 @end

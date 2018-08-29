@@ -15,7 +15,7 @@ static char kUIAlertViewBlockAddress;
 @interface UIAlertView ()<UIAlertViewDelegate>
 @end
 @implementation UIAlertView (Block)
-- (void)showAlertWithCompletionHandler: (void (^)(NSInteger))block
+- (void)ua_showAlertWithCompletionHandler: (void (^)(NSInteger))block
 {
     self.delegate = self;
     objc_setAssociatedObject(self,&kUIAlertViewBlockAddress,block,OBJC_ASSOCIATION_COPY);
@@ -33,7 +33,7 @@ static char kUIAlertViewBlockAddress;
     }
 }
 
-- (void)clearActionBlock
+- (void)ua_clearActionBlock
 {
     self.delegate = nil;
     objc_setAssociatedObject(self, &kUIAlertViewBlockAddress, nil, OBJC_ASSOCIATION_COPY);

@@ -1,14 +1,14 @@
 //
-//  NSDictionary+Json_ua.h
+//  NSDictionary+Json.h
 //  BowenToolDemo
 //
-//  Created by 陈伟财 on 2018/2/23.
+//  Created by 陈伟财 on 2018/8/29.
 //  Copyright © 2018年 Bowen. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface NSDictionary (Json_ua)
+@interface NSDictionary (Json)
 
 - (NSString *)jsonString:(NSString *)key;
 
@@ -24,4 +24,11 @@
 
 - (double)jsonDouble:(NSString *)key;
 
+
+/**
+ *  @brief NSDictionary转换成JSON字符串
+ *
+ *  @return  JSON字符串
+ */
+- (NSString *)ua_JSONString;
 @end

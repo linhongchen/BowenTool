@@ -1,15 +1,15 @@
 //
-//  NSData+AES_ua.m
+//  NSData+AES.m
 //  BowenToolDemo
 //
-//  Created by 陈伟财 on 2018/2/23.
+//  Created by 陈伟财 on 2018/8/29.
 //  Copyright © 2018年 Bowen. All rights reserved.
 //
 
-#import "NSData+AES_ua.h"
+#import "NSData+AES.h"
 #import <CommonCrypto/CommonCryptor.h>
 
-@implementation NSData (AES_ua)
+@implementation NSData (AES)
 
 - (NSData *)AES128EncryptedDataWithKey:(NSString *)key
 {
@@ -162,3 +162,4 @@
 }
 
 @end
+

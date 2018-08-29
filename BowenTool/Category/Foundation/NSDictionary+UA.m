@@ -11,7 +11,7 @@
 
 @implementation NSDictionary (UA)
 
-- (NSString *)UASortString
+- (NSString *)uaSortString
 {
     NSArray *keyArray = [self allKeys];
     NSArray *sortArray = [keyArray sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
@@ -62,7 +62,7 @@
 }
 
 
-- (NSArray *)UASortKeys
+- (NSArray *)uaSortKeys
 {
     if (!self)
     {
@@ -74,6 +74,66 @@
         return [obj1 compare:obj2]; //升序
     }];
     return newKeys;
+}
+
+
+
+
+/**
+ *  @brief  并入一个NSDictionary
+ *
+ *  @param dict NSDictionary
+ *
+ *  @return 增加后的NSDictionary
+ */
+- (NSDictionary *)ua_dictionaryByMergingWith:(NSDictionary *)dict
+{
+    NSMutableDictionary *result = [NSMutableDictionary dictionaryWithDictionary:self];
+    NSMutableDictionary *resultTemp = [NSMutableDictionary dictionaryWithDictionary:dict];
+    [resultTemp addEntriesFromDictionary:dict];
+    [resultTemp enumerateKeysAndObjectsUsingBlock: ^(id key, id obj, BOOL *stop)
+    {
+        if ([self objectForKey:key])
+        {
+            if ([obj isKindOfClass:[NSDictionary class]])
+            {
+                NSDictionary * newVal = [[self objectForKey: key] ua_dictionaryByMergingWith:(NSDictionary *)obj];
+                [result setObject: newVal forKey: key];
+            }
+            else
+            {
+                [result setObject: obj forKey: key];
+            }
+        }
+        else if([dict objectForKey:key])
+        {
+            if ([obj isKindOfClass:[NSDictionary class]])
+            {
+                NSDictionary * newVal = [[dict objectForKey: key] ua_dictionaryByMergingWith: (NSDictionary *) obj];
+                [result setObject: newVal forKey: key];
+            }
+            else
+            {
+                [result setObject: obj forKey: key];
+            }
+        }
+    }];
+    return (NSDictionary *)[result mutableCopy];
+}
+
+#pragma mark - Manipulation
+- (NSDictionary *)ua_dictionaryByAddingEntriesFromDictionary:(NSDictionary *)dictionary
+{
+    NSMutableDictionary *result = [self mutableCopy];
+    [result addEntriesFromDictionary:dictionary];
+    return result;
+}
+
+- (NSDictionary *)ua_dictionaryByRemovingEntriesWithKeys:(NSSet *)keys
+{
+    NSMutableDictionary *result = [self mutableCopy];
+    [result removeObjectsForKeys:keys.allObjects];
+    return result;
 }
 
 @end

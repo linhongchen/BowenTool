@@ -1,14 +1,14 @@
 //
-//  NSDictionary+Json_ua.m
+//  NSDictionary+Json.m
 //  BowenToolDemo
 //
-//  Created by 陈伟财 on 2018/2/23.
+//  Created by 陈伟财 on 2018/8/29.
 //  Copyright © 2018年 Bowen. All rights reserved.
 //
 
-#import "NSDictionary+Json_ua.h"
+#import "NSDictionary+Json.h"
 
-@implementation NSDictionary (Json_ua)
+@implementation NSDictionary (Json)
 
 - (NSString *)jsonString:(NSString *)key
 {
@@ -128,4 +128,26 @@
     return 0;
 }
 
+
+/**
+ *  @brief NSDictionary转换成JSON字符串
+ *
+ *  @return  JSON字符串
+ */
+- (NSString *)ua_JSONString
+{
+    NSError *error = nil;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self
+                                                       options:NSJSONWritingPrettyPrinted
+                                                         error:&error];
+    if (jsonData == nil)
+    {
+#ifdef DEBUG
+        NSLog(@"fail to get JSON from dictionary: %@, error: %@", self, error);
+#endif
+        return nil;
+    }
+    NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    return jsonString;
+}
 @end

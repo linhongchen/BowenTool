@@ -59,7 +59,7 @@ static const void *associatedKey = "associatedKey";
 
 
 #pragma mark - <<<<<< ButtonType >>>>>> -
-- (void)setbuttonType:(UAButtonType)type
+- (void)ua_setbuttonType:(UAButtonType)type
 {
     
     [self layoutIfNeeded];
@@ -83,7 +83,7 @@ static const void *associatedKey = "associatedKey";
     }
 }
 
-- (void)layoutButtonWithStyle:(UAButtonStyle)style
+- (void)ua_layoutButtonWithStyle:(UAButtonStyle)style
                         space:(CGFloat)space
 {
     // 1. 得到imageView和titleLabel的宽、高
@@ -151,7 +151,7 @@ static const void *associatedKey = "associatedKey";
     [self addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (void)addBottomLine
+- (void)ua_addBottomLine
 {
     NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:self.currentTitle];
     NSRange strRange = {0,[str length]};

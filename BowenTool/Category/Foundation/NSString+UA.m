@@ -7,6 +7,7 @@
 //
 
 #import "NSString+UA.h"
+#import "NSString+RegEx.h"
 #import <CommonCrypto/CommonDigest.h>
 #import <CommonCrypto/CommonCryptor.h>
 #import <CommonCrypto/CommonHMAC.h>
@@ -45,37 +46,6 @@
     return [NSURL URLWithString:urlString];
 }
 
-- (NSURL *)picUrlBgc:(NSString *)bgc
-{
-    if (!self)
-    {
-        return [NSURL new];
-    }
-    
-    NSString *urlString = self;
-    if (![urlString hasPrefix:@"https://"] && ![urlString hasPrefix:@"http://"])
-    {
-        urlString = [NSString stringWithFormat:@"https://%@", urlString];
-        urlString = [urlString stringByReplacingOccurrencesOfString:@"////" withString:@"//"];
-    }
-    
-    if ([urlString hasPrefix:@"https://underarmour.scene7.com/"])
-    {
-        NSRange bgcRange = [urlString rangeOfString:@"bgc="];
-        if (bgcRange.length != 0)
-        {
-            bgcRange.length = 10;
-        }
-        
-        //存在-防止越界
-        if ([urlString substringWithRange:bgcRange])
-        {
-            NSString *bgcStr = [NSString stringWithFormat:@"bgc=%@", bgc];
-            urlString = [urlString stringByReplacingCharactersInRange:bgcRange withString:bgcStr];
-        }
-    }
-    return [NSURL URLWithString:urlString];
-}
 
 - (NSNumber *)numberValue
 {
@@ -200,6 +170,29 @@
     }
 }
 
+
+/**
+ *  将中文字符串转为拼音
+ *
+ *  @return 拼音
+ */
+- (NSString *)ua_pinyinWithChinese
+{
+    // 将中文字符串转成可变字符串
+    NSMutableString *pinyinText = [[NSMutableString alloc] initWithString:self];
+    // 先转换为带声调的拼音
+    CFStringTransform((__bridge CFMutableStringRef)pinyinText, 0, kCFStringTransformMandarinLatin, NO);// 输出 pinyin: zhōng guó sì chuān
+    // 再转换为不带声调的拼音
+    CFStringTransform((__bridge CFMutableStringRef)pinyinText, 0, kCFStringTransformStripDiacritics, NO);// 输出 pinyin: zhong guo si chuan
+    // 转换为首字母大写拼音
+    // NSString *capitalPinyin = [pinyinText capitalizedString];
+    // 输出 capitalPinyin: Zhong Guo Si Chuan
+    // 替换掉空格
+    NSString *newString = [NSString stringWithFormat:@"%@",pinyinText];
+    NSString *newStr = [newString stringByReplacingOccurrencesOfString:@" " withString:@""];
+    return newStr.lowercaseString;
+}
+
 - (NSString *)componentsSeparatedInString:(NSString *)type
 {
     if (self && self.length > 0)
@@ -231,20 +224,6 @@
     BOOL res = [self isEqualToString:filtered];
     
     return res;
-}
-
-
-//正则验证
-- (BOOL)regularString:(NSString *)regularStr
-{
-    if (!self || self.hash == @"".hash)
-    {
-        return YES;
-    }
-    
-    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regularStr];
-    BOOL isMatch = [pred evaluateWithObject:self];
-    return isMatch;
 }
 
 - (CGSize)stringSizeWithFont:(UIFont *)font;
@@ -411,19 +390,18 @@ static NSDateFormatter *_formatter = nil;
     {
         return NO;
     }
-    return [[self replaceEmptyString] regularString:PhoneRegex];
+    return [self ua_validateWithRegEx:PhoneRegex];
 }
 
 - (BOOL)codePermission
 {
     if (self.hash == @"".hash ||
-        self.length < 4 ||
-        self.length > 6)
+        (self.length != 4 && self.length != 6))
     {
         return NO;
     }
     
-    return [[self replaceEmptyString] typeString:Type_NUMBER];
+    return [self typeString:Type_NUMBER];
 }
 
 - (BOOL)namePermission

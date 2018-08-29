@@ -10,11 +10,33 @@
 #define UAFoundation_h
 
 #import "NSArray+UA.h"
-#import "NSObject+UA.h"
-#import "NSString+UA.h"
+
+#import "NSData+Base64.h"
+
+#import "NSDate+Extension.h"
+
 #import "NSDictionary+UA.h"
-#import "NSDictionary+Json_ua.h"
-#import "NSDate+Extension_ua.h"
+#import "NSDictionary+Json.h"
+#import "NSDictionary+SafeAccess.h"
+#import "NSDictionary+URL.h"
+
+#import "NSFileManager+Path.h"
+
 #import "NSMutableAttributedString+UA.h"
+
+#import "NSObject+UA.h"
+#import "NSObject+AppInfo.h"
+#import "NSObject+Reflection.h"
+#import "NSObject+Runtime.h"
+
+#import "NSString+UA.h"
+#import "NSString+Base64.h"
+#import "NSString+Contains.h"
+#import "NSString+Dictionary.h"
+#import "NSString+Emoji.h"
+#import "NSString+RegEx.h"
+#import "NSString+Size.h"
+#import "NSString+URLEncode.h"
+
 
 #endif /* UAFoundation_h */

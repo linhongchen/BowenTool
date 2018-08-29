@@ -11,6 +11,11 @@
 
 @interface NSObject (UA)
 
+/**
+ *  根据各种情况判断NSObject是否为空 是空返回yes
+ */
+- (BOOL)ua_isEmpty;
+
 #pragma mark - <<<<<< SVProgress >>>>>> -
 extern void ShowHUD(void);
 extern void ShowSuccessStatus(NSString *statues);
@@ -27,8 +32,15 @@ extern void ShowError(NSError *error);
 + (CGFloat)lineHeight;
 + (CGFloat)spaceHeight;
 
+
+#pragma mark - <<<<<< TOOL >>>>>> -
 //播放提示音
 + (void)vibrate;
 //震动
 + (void)vishake;
+
+
+#pragma mark - <<<<<< 指纹识别 >>>>>> -
++ (void)fingerprintIdentificationWithSuccess:(void(^)(void))successful fail:(void(^)(NSError *))fail;
+
 @end

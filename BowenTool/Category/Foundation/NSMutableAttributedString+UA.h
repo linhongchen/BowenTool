@@ -28,6 +28,7 @@
                    color:(UIColor *)color
                lineColor:(UIColor *)lineColor;
 
+- (void)addLineToString:(NSString *)lineStr;
 - (void)addLineSpace:(CGFloat)space;
 - (void)addWordSpace:(CGFloat)space;
 - (void)addLineSpace:(CGFloat)lineSpace wordSpace:(CGFloat)wordSpace;

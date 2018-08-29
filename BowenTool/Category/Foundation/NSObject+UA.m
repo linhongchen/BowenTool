@@ -15,99 +15,152 @@
 #endif
 
 #import <AudioToolbox/AudioServices.h>
+#import <LocalAuthentication/LocalAuthentication.h>
 
 @implementation NSObject (UA)
 
-+ (CGFloat)tabbarHeight
+- (BOOL)ua_isEmpty
 {
-    return 49.0;
+    if (self == nil)
+    {
+        return YES;
+    }
+    else if ([self isKindOfClass:[NSNull class]])
+    {
+        return YES;
+    }
+    else if ([self isKindOfClass:[NSString class]])
+    {
+        NSString *string = (NSString *)self;
+        return string.length == 0 ||
+        [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]].length == 0 ||
+        [string stringByReplacingOccurrencesOfString:@" " withString:@""].length == 0 ||
+        [string isEqualToString:@"null"]||
+        [string isEqualToString:@"(null)"] ||
+        [string isEqualToString:@"<null>"];
+    }
+    else if ([self isKindOfClass:[NSArray class]])
+    {
+        NSArray *array = (NSArray *)self;
+        return array.count == 0;
+    }
+    else if ([self isKindOfClass:[NSDictionary class]])
+    {
+        NSDictionary *dic = (NSDictionary *)self;
+        return dic.allKeys.count == 0;
+    }
+    else if ([self isKindOfClass:[NSURL class]])
+    {
+        NSURL *url = (NSURL *)self;
+        return url.absoluteString.hash == @"".hash;
+    }
+    else
+    {
+     
+    }
+    
+    return NO;
 }
 
-+ (CGFloat)navbarHeight
-{
-    return 72.0;
-}
 
-+ (CGFloat)lineHeight
-{
-    return 1.5;
-}
-
-+ (CGFloat)spaceHeight
-{
-    return 44;
-}
-
+#pragma mark - <<<<<< SVProgress >>>>>> -
 void ShowHUD(void)
 {
-    if (![NSThread isMainThread]) {
+    if (![NSThread isMainThread])
+    {
         dispatch_async(dispatch_get_main_queue(), ^{
             [SVProgressHUD show];
         });
-    }else{
+    }
+    else
+    {
         [SVProgressHUD show];
     }
 }
 
 
-void ShowSuccessStatus(NSString *statues){
-    if (![NSThread isMainThread]) {
+void ShowSuccessStatus(NSString *statues)
+{
+    if (![NSThread isMainThread])
+    {
         dispatch_async(dispatch_get_main_queue(), ^{
             [SVProgressHUD showSuccessWithStatus:statues];
         });
-    }else{
+    }
+    else
+    {
         [SVProgressHUD showSuccessWithStatus:statues];
     }
 }
 
 
-void ShowMessage(NSString *statues){
-    if (![NSThread isMainThread]) {
+void ShowMessage(NSString *statues)
+{
+    if (![NSThread isMainThread])
+    {
         dispatch_async(dispatch_get_main_queue(), ^{
             [SVProgressHUD showInfoWithStatus:statues];
         });
-    }else{
+    }
+    else
+    {
         [SVProgressHUD showInfoWithStatus:statues];
     }
 }
 
-void ShowErrorStatus(NSString *statues){
-    if (![NSThread isMainThread]) {
+void ShowErrorStatus(NSString *statues)
+{
+    if (![NSThread isMainThread])
+    {
         dispatch_async(dispatch_get_main_queue(), ^{
             [SVProgressHUD showErrorWithStatus:statues];
         });
-    }else{
+    }
+    else
+    {
         [SVProgressHUD showErrorWithStatus:statues];
     }
 }
 
 
-void ShowMaskStatus(NSString *statues){
-    if (![NSThread isMainThread]) {
+void ShowMaskStatus(NSString *statues)
+{
+    if (![NSThread isMainThread])
+    {
         dispatch_async(dispatch_get_main_queue(), ^{
             [SVProgressHUD showWithStatus:statues];
         });
-    }else{
+    }
+    else
+    {
         [SVProgressHUD showWithStatus:statues];
     }
 }
 
-void ShowProgress(CGFloat progress){
-    if (![NSThread isMainThread]) {
+void ShowProgress(CGFloat progress)
+{
+    if (![NSThread isMainThread])
+    {
         dispatch_async(dispatch_get_main_queue(), ^{
             [SVProgressHUD showProgress:progress status:@""];
         });
-    }else{
+    }
+    else
+    {
         [SVProgressHUD showProgress:progress status:@""];
     }
 }
 
-void DismissHud(void){
-    if (![NSThread isMainThread]) {
+void DismissHud(void)
+{
+    if (![NSThread isMainThread])
+    {
         dispatch_async(dispatch_get_main_queue(), ^{
             [SVProgressHUD dismiss];
         });
-    }else{
+    }
+    else
+    {
         [SVProgressHUD dismiss];
     }
 }
@@ -128,15 +181,42 @@ void ShowError(NSError *error)
         }
     }
     
-    if (![NSThread isMainThread]) {
+    if (![NSThread isMainThread])
+    {
         dispatch_async(dispatch_get_main_queue(), ^{
             [SVProgressHUD showErrorWithStatus:statues];
         });
-    }else{
+    }
+    else
+    {
         [SVProgressHUD showErrorWithStatus:statues];
     }
 }
 
+
+#pragma mark - <<<<<< 导航栏/状态栏 >>>>>> -
++ (CGFloat)tabbarHeight
+{
+    return 49.0;
+}
+
++ (CGFloat)navbarHeight
+{
+    return 72.0;
+}
+
++ (CGFloat)lineHeight
+{
+    return 1.;
+}
+
++ (CGFloat)spaceHeight
+{
+    return 44;
+}
+
+
+#pragma mark - <<<<<< TOOL >>>>>> -
 static SystemSoundID sound_male_id = 0;
 + (void)vibrate
 {
@@ -163,6 +243,43 @@ static SystemSoundID sound_male_id = 0;
 + (void)vishake
 {
     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);//静音模式下震动
+}
+
+
+#pragma mark - <<<<<< 指纹识别 >>>>>> -
++ (void)fingerprintIdentificationWithSuccess:(void(^)(void))successful fail:(void(^)(NSError *))fail
+{
+    float version = [UIDevice currentDevice].systemVersion.floatValue;
+    // 判断当前系统版本
+    if (version < 8.0 )
+    {
+        NSLog(@"系统版本太低,请升级至最新系统");
+        return;
+    }
+    // 1> 实例化指纹识别对象
+    LAContext *laCtx = [[LAContext alloc] init];
+    
+    // 2> 判断当前设备是否支持指纹识别功能.
+    if (![laCtx canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:NULL])
+    {
+        // 如果设备不支持指纹识别功能
+        NSLog(@"该设备不支持指纹识别功能");
+        return;
+    };
+    [laCtx evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"指纹登陆" reply:^(BOOL success, NSError *error)
+    {
+        // 如果成功,表示指纹输入正确.
+        if (success)
+        {
+            NSLog(@"指纹识别成功!");
+            successful();
+        }
+        else
+        {
+            NSLog(@"指纹识别错误,请再次尝试");
+            fail(error);
+        }
+    }];
 }
 
 @end
