@@ -29,6 +29,7 @@ end
 s.subspec 'Networking' do |ss|
 ss.source_files = 'BowenTool/Networking/*.{h,m}'
 ss.dependency 'AFNetworking', '~> 3.0'
+ss.dependency 'YYCache', '~> 1.0.4'
 end
 
 
