@@ -24,7 +24,6 @@
 		0EAD7BCC203FB918001FA2E1 /* UIButton+UA.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD7BC2203FB917001FA2E1 /* UIButton+UA.m */; };
 		0EAD7BCD203FB918001FA2E1 /* UIActionSheet+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD7BC3203FB917001FA2E1 /* UIActionSheet+Block.m */; };
 		0EAD7BCE203FB918001FA2E1 /* UILabel+UA.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD7BC5203FB917001FA2E1 /* UILabel+UA.m */; };
-		0EAD7BD0203FBF2C001FA2E1 /* scanner.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0EAD7BCF203FBF2C001FA2E1 /* scanner.wav */; };
 		0EDAAB13213408410039C83E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EDAAB12213408410039C83E /* Default-568h@2x.png */; };
 		0EDAAB162134DC380039C83E /* UIImage+UA.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDAAB152134DC380039C83E /* UIImage+UA.m */; };
 		0EDAAB192134DCDB0039C83E /* UIImage+Bitmap.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDAAB182134DCDB0039C83E /* UIImage+Bitmap.m */; };
@@ -107,7 +106,6 @@
 		0EAD7BC7203FB917001FA2E1 /* UIAlertView+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Block.h"; sourceTree = "<group>"; };
 		0EAD7BC8203FB918001FA2E1 /* UIButton+UA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+UA.h"; sourceTree = "<group>"; };
 		0EAD7BC9203FB918001FA2E1 /* UITextField+UA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+UA.h"; sourceTree = "<group>"; };
-		0EAD7BCF203FBF2C001FA2E1 /* scanner.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = scanner.wav; sourceTree = "<group>"; };
 		0EDAAB12213408410039C83E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		0EDAAB142134DC380039C83E /* UIImage+UA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+UA.h"; sourceTree = "<group>"; };
 		0EDAAB152134DC380039C83E /* UIImage+UA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+UA.m"; sourceTree = "<group>"; };
@@ -256,7 +254,6 @@
 		0EAD7B84203FB386001FA2E1 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				0EAD7BCF203FBF2C001FA2E1 /* scanner.wav */,
 				0EAD7B85203FB386001FA2E1 /* UIKit */,
 				0EAD7B86203FB386001FA2E1 /* Foundation */,
 			);
@@ -481,7 +478,6 @@
 			files = (
 				0E5D9F97203E573D00C41291 /* Assets.xcassets in Resources */,
 				0EDAAB13213408410039C83E /* Default-568h@2x.png in Resources */,
-				0EAD7BD0203FBF2C001FA2E1 /* scanner.wav in Resources */,
 				0E5D9F95203E573D00C41291 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
