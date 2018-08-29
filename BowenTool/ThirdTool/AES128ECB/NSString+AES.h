@@ -20,8 +20,4 @@
 - (NSString *)decryptAESAppIdAppKey_key:(NSString *)key;
 
 
-
-
-+ (NSString *)base64StringFromData:(NSData *)data length:(NSUInteger)length;
-
 @end

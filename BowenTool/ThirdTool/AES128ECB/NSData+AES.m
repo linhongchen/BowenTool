@@ -9,6 +9,7 @@
 #import "NSData+AES.h"
 #import <CommonCrypto/CommonCryptor.h>
 
+
 @implementation NSData (AES)
 
 - (NSData *)AES128EncryptedDataWithKey:(NSString *)key
@@ -277,5 +278,6 @@
     
     return theData;
 }
+
 @end
 

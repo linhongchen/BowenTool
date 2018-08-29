@@ -17,4 +17,5 @@
 
 
 + (NSData *)base64DataFromString:(NSString *)string;
+
 @end
