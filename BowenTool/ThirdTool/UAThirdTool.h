@@ -13,7 +13,5 @@
 #import "AESCrypt.h"
 #import "NSData+AES.h"
 #import "NSString+AES.h"
-#import "NSData+Base64.h"
-#import "NSString+Base64.h"
 
 #endif /* UAThirdTool_h */

@@ -16,9 +16,5 @@
 - (NSString *)ua_base64DecodedString;
 - (NSData *)ua_base64DecodedData;
 
-+ (NSString *)base64StringFromData:(NSData *)data length:(NSUInteger)length;
-
-
-
 - (NSString *)ua_md5String;
 @end

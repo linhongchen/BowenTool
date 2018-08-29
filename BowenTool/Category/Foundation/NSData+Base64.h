@@ -33,5 +33,5 @@
  */
 - (NSString *)ua_base64EncodedString;
 
-+ (NSData *)base64DataFromString:(NSString *)string;
+
 @end

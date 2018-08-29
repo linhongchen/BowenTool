@@ -15,4 +15,6 @@
 - (NSData *)AES128EncryptedDataWithKey:(NSString *)key iv:(NSString *)iv;
 - (NSData *)AES128DecryptedDataWithKey:(NSString *)key iv:(NSString *)iv;
 
+
++ (NSData *)base64DataFromString:(NSString *)string;
 @end
