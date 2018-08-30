@@ -17,11 +17,11 @@ cat.source_files = 'BowenTool/Category/*.h'
 cat.subspec 'Foundation' do |fou|
   fou.resources = 'BowenTool/Category/*.wav'
   fou.source_files = 'BowenTool/Category/Foundation/*.{h,m}
-  fou.dependency 'SVProgressHUD','2.2.5'
   end
 cat.subspec 'UIKit' do |uik|
   uik.source_files = 'BowenTool/Category/UIKit/*.{h,m}'
   end
+cat.dependency 'SVProgressHUD','2.2.5'
 end
 
 
