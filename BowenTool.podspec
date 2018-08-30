@@ -13,33 +13,28 @@ s.requires_arc = true
 s.source_files = 'BowenTool/*.h'
 
 s.subspec 'Category' do |ss|
-ss.source_files = 'BowenTool/Category/*.h',
-Ss.resources = 'BowenTool/Category/*.wav'
-ss.dependency 'SVProgressHUD', '~> 2.2.5'
+ss.source_files = 'BowenTool/Category/*.h'
 ss.subspec 'Foundation' do |sss|
+  sss.resources = 'BowenTool/Category/*.wav'
   sss.source_files = 'BowenTool/Category/Foundation/*.{h,m}
-  sss.public_header_files = 'BowenTool/Category/Foundation/*.h'
   sss.dependency 'SVProgressHUD', '~> 2.2.5'  
   end
 ss.subspec 'UIKit' do |sss|
   sss.source_files = 'BowenTool/Category/UIKit/*.{h,m}' 
-  sss.public_header_files = 'BowenTool/Category/Foundation/*.h'
   end
 end
 
 
 s.subspec 'ThirdTool' do | ss |
-  ss.source_files = 'BowenTool/ThirdTool/*.h',
+  ss.source_files = 'BowenTool/ThirdTool/*.h'
   ss.subspec 'AES128ECB' do |sss|
   sss.source_files = 'BowenTool/ThirdTool/AES128ECB/**/*'
-  sss.public_header_files = 'BowenTool/Category/Foundation/*.h'
   end
 end
 
 
 s.subspec 'Networking' do |ss|
 ss.source_files = 'BowenTool/Networking/*.{h,m}'
-ss.public_header_files = 'BowenTool/Category/Foundation/*.h'
 ss.dependency 'AFNetworking', '~> 3.2.1'
 ss.dependency 'YYCache', '~> 1.0.4'
 end
