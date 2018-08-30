@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E26493D2137BE2400184237 /* scanner.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0E26493C2137BE2400184237 /* scanner.wav */; };
 		0E5D9F8F203E573D00C41291 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5D9F8E203E573D00C41291 /* AppDelegate.m */; };
 		0E5D9F92203E573D00C41291 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5D9F91203E573D00C41291 /* ViewController.m */; };
 		0E5D9F95203E573D00C41291 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E5D9F93203E573D00C41291 /* Main.storyboard */; };
@@ -69,6 +70,7 @@
 
 /* Begin PBXFileReference section */
 		037930013A2FA5B8E7641854 /* Pods-BowenToolDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BowenToolDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-BowenToolDemo/Pods-BowenToolDemo.release.xcconfig"; sourceTree = "<group>"; };
+		0E26493C2137BE2400184237 /* scanner.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = scanner.wav; sourceTree = "<group>"; };
 		0E5D9F8A203E573D00C41291 /* BowenToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BowenToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E5D9F8D203E573D00C41291 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0E5D9F8E203E573D00C41291 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -92,9 +94,9 @@
 		0EAD7BA1203FB386001FA2E1 /* AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESCrypt.h; sourceTree = "<group>"; };
 		0EAD7BA6203FB386001FA2E1 /* UANetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UANetworking.h; sourceTree = "<group>"; };
 		0EAD7BA7203FB386001FA2E1 /* UANetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UANetworking.m; sourceTree = "<group>"; };
-		0EAD7BB7203FB3B1001FA2E1 /* UAUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UAUIKit.h; path = Category/UAUIKit.h; sourceTree = "<group>"; };
-		0EAD7BB8203FB3B2001FA2E1 /* UAFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UAFoundation.h; path = Category/UAFoundation.h; sourceTree = "<group>"; };
-		0EAD7BB9203FB3B2001FA2E1 /* UAThirdTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UAThirdTool.h; path = ThirdTool/UAThirdTool.h; sourceTree = "<group>"; };
+		0EAD7BB7203FB3B1001FA2E1 /* UAUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAUIKit.h; sourceTree = "<group>"; };
+		0EAD7BB8203FB3B2001FA2E1 /* UAFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAFoundation.h; sourceTree = "<group>"; };
+		0EAD7BB9203FB3B2001FA2E1 /* UAThirdTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAThirdTool.h; sourceTree = "<group>"; };
 		0EAD7BBA203FB3BC001FA2E1 /* UATools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UATools.h; sourceTree = "<group>"; };
 		0EAD7BC0203FB917001FA2E1 /* UITextField+UA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+UA.m"; sourceTree = "<group>"; };
 		0EAD7BC1203FB917001FA2E1 /* UIAlertView+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Block.m"; sourceTree = "<group>"; };
@@ -240,9 +242,6 @@
 			isa = PBXGroup;
 			children = (
 				0EAD7BBA203FB3BC001FA2E1 /* UATools.h */,
-				0EAD7BB9203FB3B2001FA2E1 /* UAThirdTool.h */,
-				0EAD7BB7203FB3B1001FA2E1 /* UAUIKit.h */,
-				0EAD7BB8203FB3B2001FA2E1 /* UAFoundation.h */,
 				0EAD7B84203FB386001FA2E1 /* Category */,
 				0EAD7B98203FB386001FA2E1 /* ThirdTool */,
 				0EAD7BA5203FB386001FA2E1 /* Networking */,
@@ -254,6 +253,9 @@
 		0EAD7B84203FB386001FA2E1 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				0EAD7BB7203FB3B1001FA2E1 /* UAUIKit.h */,
+				0EAD7BB8203FB3B2001FA2E1 /* UAFoundation.h */,
+				0E26493C2137BE2400184237 /* scanner.wav */,
 				0EAD7B85203FB386001FA2E1 /* UIKit */,
 				0EAD7B86203FB386001FA2E1 /* Foundation */,
 			);
@@ -371,6 +373,7 @@
 		0EAD7B98203FB386001FA2E1 /* ThirdTool */ = {
 			isa = PBXGroup;
 			children = (
+				0EAD7BB9203FB3B2001FA2E1 /* UAThirdTool.h */,
 				0EAD7B9A203FB386001FA2E1 /* AES128ECB */,
 			);
 			path = ThirdTool;
@@ -477,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E5D9F97203E573D00C41291 /* Assets.xcassets in Resources */,
+				0E26493D2137BE2400184237 /* scanner.wav in Resources */,
 				0EDAAB13213408410039C83E /* Default-568h@2x.png in Resources */,
 				0E5D9F95203E573D00C41291 /* Main.storyboard in Resources */,
 			);

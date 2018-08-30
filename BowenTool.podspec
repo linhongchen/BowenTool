@@ -14,8 +14,8 @@ s.source_files = 'BowenTool/*.h', 'BowenTool/Category/*.h','BowenTool/ThirdTool/
 
 s.subspec 'Category' do |ss|
 ss.source_files = 'BowenTool/Category/**/*'
-#s.resources    = 'BowenTool/Category/**/*.wav'
-ss.dependency 'SVProgressHUD', '~> 2.2.1'
+s.resources    = 'BowenTool/Category/**/*.wav'
+ss.dependency 'SVProgressHUD', '~> 2.2.5'
 end
 
 
@@ -28,7 +28,7 @@ end
 
 s.subspec 'Networking' do |ss|
 ss.source_files = 'BowenTool/Networking/*.{h,m}'
-ss.dependency 'AFNetworking', '~> 3.0'
+ss.dependency 'AFNetworking', '~> 3.2.1'
 ss.dependency 'YYCache', '~> 1.0.4'
 end
 
