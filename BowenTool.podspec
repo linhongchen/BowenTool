@@ -17,9 +17,11 @@ cat.source_files = 'BowenTool/Category/*.h'
 cat.subspec 'Foundation' do |fou|
   fou.resources = 'BowenTool/Category/*.wav'
   fou.source_files = 'BowenTool/Category/Foundation/*.{h,m}
-  fou.dependency 'SVProgressHUD','~> 2.2.5'
+  fou.dependency 'SVProgressHUD','2.2.5'
+  end
 cat.subspec 'UIKit' do |uik|
   uik.source_files = 'BowenTool/Category/UIKit/*.{h,m}'
+  end
 end
 
 
@@ -32,8 +34,8 @@ end
 
 s.subspec 'Networking' do |net|
   net.source_files = 'BowenTool/Networking/*.{h,m}'
-  net.dependency 'AFNetworking','~> 3.2.1'
-  net.dependency 'YYCache','~> 1.0.4'
+  net.dependency 'AFNetworking','3.2.1'
+  net.dependency 'YYCache','1.0.4'
 end
 
 
