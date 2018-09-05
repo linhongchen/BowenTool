@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "BowenTool"
-s.version      = "1.0.6"
+s.version      = "1.0.7"
 s.platform     = :ios, "8.0"
 s.ios.deployment_target = '8.0'
 s.summary      = "bowen some tools"
@@ -36,7 +36,7 @@ end
 s.subspec 'Networking' do |net|
   net.source_files = 'BowenTool/Networking/*.{h,m}'
   net.dependency 'AFNetworking','~> 3.2.1'
-  net.dependency 'YYCache','~> 1.0.4'
+  net.dependency 'YYKit','~> 1.0.9'
 end
 
 
