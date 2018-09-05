@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-#if __has_include(<YYCache/YYCache.h>)
-#import <YYCache/YYCache.h>
+#if __has_include(<YYKit/YYCache.h>)
+#import <YYKit/YYCache.h>
 #else
 #import "YYCache.h"
 #endif
